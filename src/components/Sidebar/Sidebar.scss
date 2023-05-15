@@ -1,0 +1,125 @@
+@import 'components/Variables.scss';
+
+.nav-bar {
+	background: $main-bg-color;
+	width: 60px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	min-height: 500px;
+
+	.logo {
+		display: block;
+		padding: 8px 0;
+		img {
+			display: block;
+			margin: 8px auto;
+			width: 24px;
+			height: auto;
+
+			&.sub-logo {
+				width: 50px;
+			}
+		}
+	}
+	nav {
+		display: block;
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		height: 210px;
+		top: 50%;
+		transform: translate(0, -50%);
+		//margin-top: -120px;
+		a {
+			font-size: 22px;
+			color: $gray-color;
+			display: block;
+			line-height: 51px;
+			height: 51px;
+			position: relative;
+			text-decoration: none;
+
+			svg {
+				transition: $main-transition;
+			}
+			i {
+				transition: $main-transition;
+			}
+			&:hover {
+				color: $primary-color;
+				svg {
+					transform: scale(0);
+					//opacity: 0;
+				}
+				&::after {
+					transform: scale(1);
+					//opacity: 1;
+				}
+			}
+
+			&::after {
+				content: '';
+				font-size: 9px;
+				letter-spacing: 2px;
+				position: absolute;
+				bottom: 0;
+				display: block;
+				width: 100%;
+				text-align: center;
+				//opacity: 0;
+				transform: scale(0);
+				transition: $main-transition;
+			}
+
+			&:first-child {
+				&::after {
+					content: 'HOME';
+				}
+			}
+		}
+	}
+	a.about-link {
+		&::after {
+			content: 'ABOUT';
+		}
+	}
+	a.contact-link {
+		&::after {
+			content: 'CONTACT';
+		}
+	}
+	a.active {
+		svg {
+			color: $primary-color;
+		}
+	}
+
+	ul {
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		margin: 0;
+		bottom: 20px;
+		padding: 0;
+		list-style: none;
+		li {
+			a {
+				padding: 7px 0;
+				display: block;
+				font-size: 15px;
+				line-height: 16px;
+
+				svg {
+					transition: $main-transition;
+				}
+
+				&:hover svg {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+}

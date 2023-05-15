@@ -1,0 +1,79 @@
+@import 'components/Variables.scss';
+
+.home-page {
+	.text-zone {
+		position: absolute;
+		top: 50%;
+		left: 10%;
+		transform: translateY(-50%);
+		width: 45%;
+		max-height: 90%;
+	}
+	h1 {
+		color: $white-color;
+		font-size: 53px;
+		margin: 0;
+		font-family: 'Coolvetica';
+		font-weight: 400;
+
+		&::before {
+			content: '<h1>';
+			font-family: $font-LaBelleAurore;
+			position: absolute;
+			font-size: 18px;
+			margin-top: -40px;
+			color: $primary-color;
+			left: 15px;
+			opacity: 0.6;
+		}
+		&::after {
+			content: '</h1>';
+			font-family: $font-LaBelleAurore;
+			font-size: 18px;
+			position: absolute;
+			margin-top: 18px;
+			margin-left: 20px;
+			color: $primary-color;
+			animation: $main-animation;
+			opacity: 0.6;
+		}
+		img {
+			width: 37px;
+			margin-left: 20px;
+			opacity: 0;
+			height: auto;
+			animation: rotateIn 1s linear both;
+			animation-delay: 1s;
+		}
+	}
+}
+
+h2 {
+	color: $gray2nd-color;
+	margin-top: 20px;
+	font-weight: normal;
+	font-size: $font-size;
+	letter-spacing: 3px;
+	animation: $main-animation;
+}
+
+.flat-button {
+	color: $primary-color;
+	font-size: 13px;
+	letter-spacing: 4px;
+	font-weight: 700;
+	text-decoration: none;
+	padding: 10px 18px;
+	border: 1px solid $primary-color;
+	margin-top: 25px;
+	float: left;
+	animation: $main-animation;
+	white-space: nowrap;
+	transition: $main-transition;
+	border-radius: 6px;
+
+	&:hover {
+		background-color: $primary-color;
+		color: #333;
+	}
+}
