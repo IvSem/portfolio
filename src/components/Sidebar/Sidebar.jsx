@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import './Sidebar.scss';
 import LogoS from 'assets/images/logo-s.png';
-import LogoSubtitle from 'assets/images/logo_sub.png';
+import LogoSubtitle from 'assets/images/logo_sum_sub.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -9,6 +9,7 @@ import {
 	faLinkedinIn,
 	faTelegram,
 } from '@fortawesome/free-brands-svg-icons';
+
 const Sidebar = () => {
 	return (
 		<div className="nav-bar">
