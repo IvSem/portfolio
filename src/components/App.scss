@@ -1,5 +1,6 @@
 @import 'components/Variables.scss';
 @import 'animate.css';
+@import '~loaders.css/src/animations/pacman.scss';
 
 @font-face {
 	font-family: 'Helvetica Neue';
@@ -14,4 +15,22 @@
 @font-face {
 	font-family: 'Coolvetica';
 	src: url('../assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
+}
+
+.loader-hidden {
+	display: none;
+}
+
+.loader-active {
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	width: 50px;
+	height: 50px;
+	animation: fadeOut 0.5s 1s;
+	animation-fill-mode: forwards;
 }

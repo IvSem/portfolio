@@ -1,21 +1,15 @@
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import LogoTitle from 'assets/images/logo-s.png';
 import './Home.scss';
 import { AnimatedLetters, Logo } from 'components';
+import Loader from 'react-loaders';
+import { useAnimated } from 'hooks/useAnimated';
 
 const Home = () => {
-	const [letterClass, setLetterClass] = useState('text-animate');
+	const { letterClass } = useAnimated();
 
 	const nameArray = [...'umenko'];
 	const jobArray = [...'Front-End Dev'];
-
-	useEffect(() => {
-		const timer = setTimeout(() => {
-			setLetterClass('text-animate-hover');
-		}, 4000);
-		return () => clearTimeout(timer);
-	}, []);
 
 	return (
 		<>
@@ -50,6 +44,7 @@ const Home = () => {
 				</div>
 				<Logo />
 			</div>
+			<Loader type="pacman" />
 		</>
 	);
 };

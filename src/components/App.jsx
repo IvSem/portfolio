@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.scss';
 
-import { About, Home, Layout } from 'pages';
+import { About, Contacts, Home, Layout } from 'pages';
 
 export const App = () => {
 	return (
@@ -9,7 +9,8 @@ export const App = () => {
 			<Routes>
 				<Route path="/" element={<Layout />}>
 					<Route index element={<Home />} />
-					<Route path="/about" element={<About />} />
+					<Route path="about" element={<About />} />
+					<Route path="contact" element={<Contacts />} />
 				</Route>
 			</Routes>
 		</>
