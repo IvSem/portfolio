@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.scss';
 
-import { About, Contacts, Home, Layout } from 'pages';
+import { About, Contacts, Home, Layout, Portfolio } from 'pages';
 
 export const App = () => {
 	return (
@@ -11,6 +11,7 @@ export const App = () => {
 					<Route index element={<Home />} />
 					<Route path="about" element={<About />} />
 					<Route path="contact" element={<Contacts />} />
+					<Route path="works" element={<Portfolio />} />
 				</Route>
 			</Routes>
 		</>
